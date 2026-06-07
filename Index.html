@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SportWear Online | Inicio</title>
+    <style>
+        /* Estilos Base y Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f4f6f9;
+            color: #333;
+        }
+
+        /* Barra de Navegación */
+        header {
+            background-color: #1a252f;
+            color: #fff;
+            padding: 1rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .navbar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .logo h1 {
+            font-size: 1.5rem;
+            color: #3498db;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #3498db;
+        }
+
+        /* Sección Hero (Banner Principal) */
+        .hero {
+            background: linear-gradient(rgba(26, 37, 47, 0.8), rgba(26, 37, 47, 0.8)), url('https://picsum.photos/1200/400') no-repeat center center/cover;
+            color: #fff;
+            height: 350px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 0 1rem;
+        }
+
+        .hero h2 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            max-width: 600px;
+        }
+
+        .btn-cta {
+            background-color: #3498db;
+            color: #fff;
+            padding: 0.75rem 1.5rem;
+            border: none;
+            border-radius: 4px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: background 0.3s;
+            text-decoration: none;
+        }
+
+        .btn-cta:hover {
+            background-color: #2980b9;
+        }
+
+        /* Contenedor Principal de Productos */
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background-color: #3498db;
+            margin: 0.5rem auto 0;
+        }
+
+        /* Cuadrícula de Tarjetas (Grid) */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .card {
+            background-color: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .card-text {
+            color: #666;
+            font-size: 0.95rem;
+            margin-bottom: 1rem;
+            line-height: 1.4;
+        }
+
+        .card-price {
+            font-size: 1.25rem;
+            font-weight: bold;
+            color: #2c3e50;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Pie de Página */
+        footer {
+            background-color: #1a252f;
+            color: #fff;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 4rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Encabezado de la página -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>SportWear Store</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Productos</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Bienvenida -->
+    <section class="hero">
+        <h2>Ropa Deportiva de Alto Rendimiento</h2>
+        <p>Explora nuestro catálogo con los mejores diseños y materiales para optimizar tus entrenamientos diarios.</p>
+        <a href="#" class="btn-cta">Ver Catálogo</a>
+    </section>
+
+    <!-- Galería / Contenedor de Productos -->
+    <main class="container">
+        <h3 class="section-title">Productos Destacados</h3>
+        
+        <div class="product-grid">
+            <!-- Tarjeta 1 -->
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=1" alt="Playera Deportiva" class="card-img">
+                <div class="card-body">
+                    <h4 class="card-title">Playera Dry-Fit</h4>
+                    <p class="card-text">Tecnología de absorción de sudor para mantenerte fresco durante entrenamientos intensos.</p>
+                    <div class="card-price">
+                        <span>$399.00</span>
+                        <a href="#" class="btn-cta" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">Agregar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=2" alt="Short de Entrenamiento" class="card-img">
+                <div class="card-body">
+                    <h4 class="card-title">Short de Compresión</h4>
+                    <p class="card-text">Ofrece un ajuste firme y cómodo que mejora el flujo sanguíneo y soporte muscular.</p>
+                    <div class="card-price">
+                        <span>$450.00</span>
+                        <a href="#" class="btn-cta" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">Agregar</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="card">
+                <img src="https://picsum.photos/300/200?random=3" alt="Tenis Running" class="card-img">
+                <div class="card-body">
+                    <h4 class="card-title">Tenis Running Pro</h4>
+                    <p class="card-text">Amortiguación ultra ligera diseñada para reducir el impacto en largas distancias.</p>
+                    <div class="card-price">
+                        <span>$1,299.00</span>
+                        <a href="#" class="btn-cta" style="padding: 0.4rem 0.8rem; font-size: 0.85rem;">Agregar</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>&copy; 2026 SportWear Online. Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
